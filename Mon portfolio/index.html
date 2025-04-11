@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/Image de l'onglet.png" type="image/png">
+</head>
+<body>
+    <!-- En-tête -->
+    <header>
+        <h2>MMD</h2>
+
+        <nav>
+            <ul>
+                <li><a href="#hero" class="nav-link">Accueil</a></li>
+                <li><a href="#about" class="nav-link">À propos</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+        <a href="#contact"><button class="bouton1">Contactez-moi</button></a>
+    </header>
+
+    <!-- MAIN  -->
+     <main>
+        <!-- Section d’accueil -->
+     <section id="hero">
+        <div class="gauche-hero">
+            <h2>Bienvenue sur mon portfolio !</h2>
+            <p>Je suis Mouhamed Mourtada Dicko, développeur front-end passionné par la création d'interfaces modernes et interactives.</p>
+            <a href="https://mes-projets.netlify.app/" target="_blank">
+            <button class="bouton2">Voir mes projets</button>
+            </a>
+        </div>
+
+        <div class="droite-hero">
+            <img src="images/image1.png" width="100%" height="100%" alt="">
+        </div>
+     </section>
+
+     <!-- À propos de moi -->
+      <section id="about" class="reveal">
+        <h2>À propos de moi </h2> <br>
+        <p>
+            Je suis un développeur front-end passionné par la création d'interfaces utilisateur modernes et intuitives. Mon parcours m'a permis de maîtriser diverses compétences en programmation, notamment avec des langages tels que HTML, CSS et JavaScript. J'adore transformer des idées en expériences interactives et visuellement attrayantes. <br>
+            Mon objectif principal est de continuer à affiner mes compétences tout en travaillant sur des projets innovants qui apportent une réelle valeur. À long terme, je souhaite contribuer à des technologies accessibles et centrées sur l'utilisateur.
+        </p>
+      </section>
+
+       <!-- Contact  -->
+        <section id="contact" class="reveal">
+            <div class="contact-gauche">
+                <h2>Retrouvez-moi sur</h2><br>
+                <div class="icones">
+                    <div class="icone1">
+                        <a href="https://wa.me/22384298520" target="_blank"><img src="images/image2.png" width="100px" height="100px" alt=""></a>
+                        <a href="https://www.facebook.com/share/1EuRBCJr6d/" target="_blank"><img src="images/image3.png" width="100px" height="100px" alt=""></a>
+                    </div>
+
+                    <div class="icone2">
+                        <a href="https://github.com/Mourtada-002" target="_blank"><img src="images/image4.png" width="100px" height="100px" alt=""></a>
+                        <a href="https://www.linkedin.com/in/mouhamed-mourtada-dicko-309089339" target="_blank"><img src="images/image5.png" width="100px" height="100px" alt=""></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-droite">
+                <h2>Contactez-moi</h2><br>
+                <form action="" id="contactForm">
+                    <input type="text" placeholder="Votre nom et prénom" required>
+                    <input type="email" placeholder="Votre adress mail" required>
+                    <textarea name="message" id="" placeholder="Votre message" required></textarea>
+                    <button type="submit">Envoyer</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- FOOTER  -->
+        <footer>
+            <P>
+                @Mouhamed Mourtada, Tout Droit reservé 2025 
+            </P>
+        </footer>
+     </main>
+
+    <script src="script.js"></script>
+</body>
+</html>     
+    

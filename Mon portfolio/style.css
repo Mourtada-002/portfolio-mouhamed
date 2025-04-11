@@ -1,0 +1,448 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* Initialisation de notre projet */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 95px; /* Ajuste selon la hauteur de ton header */
+  }
+
+/* Declaration des variable */
+
+html{
+    --var-bg-color: rgb(5, 5, 142);
+    --var-secondary-color: rgb(22, 22, 239);
+    --var-text-color: #fff;
+    --var-text-color-dark: #333;
+    --var-bg-light: #f0f4ff;
+    --var-bg-dark: #d3c9f3;   
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    background-color: var(--var-bg-light);
+    color: var(--var-text-color-dark);
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  
+  .reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }  
+
+/* HEADER  */
+
+header{
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 4rem;
+    padding: 0 2rem;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ajoute une ombre douce et diffuse autour de l'élément */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h2{
+    font-size: 2rem;
+    color: var(--var-bg-color);
+}
+
+header nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: var(--var-text-color-dark);
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-link.active {
+    color: var(--var-bg-color);
+  }
+
+header nav ul li a:hover{
+    color: var(--var-secondary-color);
+}
+
+header .bouton1{
+    background-color: var(--var-bg-color);
+    color: var(--var-text-color);
+    padding: 0.7rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+header .bouton1:hover{
+    background-color: var(--var-text-color);
+    color: var(--var-bg-color);
+    border: 1px solid var(--var-bg-color);
+}
+
+/* MAIN  */
+
+main{
+    padding: 2rem;
+}
+/* Section d’accueil  */
+#hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    width: 100%;
+    height: 70vh;
+    border-radius: 1rem;
+    background: linear-gradient(90deg, var(--var-bg-color)15%, var(--var-secondary-color)100%);
+}
+
+#hero .gauche-hero h2{
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--var-text-color);
+}
+
+#hero .gauche-hero p{
+    font-size:clamp(1rem,2vw,1rem); /* Ajuste la taille entre une valeur min et max, en s'adaptant à l'écran */
+    color: var(--var-text-color);
+}
+
+.gauche-hero .bouton2{
+    background-color: var(--var-bg-light);
+    color: var(--var-text-color-dark);
+    padding: 0.7rem 1rem;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.gauche-hero .bouton2:hover{
+    background-color: var(--var-text-color-dark);
+    color: var(--var-text-color);
+    border: 1px solid var(--var-text-color);
+}
+
+#hero .droite-hero{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.droite-hero img{
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain; /* L'image s'adapte sans être coupée */
+}
+
+/* À propos de moi */
+#about{
+    margin-top: 2rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 45vh;
+    background-color: #fff;
+    border-radius: 1rem;
+}
+
+#about h2{
+    font-size: 2rem;
+}
+
+#about p{
+    font-size:clamp(1.1rem,2vw,1.1rem); 
+}
+
+/* PARTIE CONTACT  */
+#contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background: linear-gradient(90deg, var(--var-secondary-color)15%, var(--var-bg-color)100%);
+    margin-top: 2rem;
+    height: calc(100vh - 200px);
+    border-radius: 1rem;
+}
+
+/* PARTIE GAUCHE DE CONTACT  */
+#contact .contact-gauche{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#contact .contact-gauche h2{
+    color: var(--var-text-color);
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+#contact .contact-gauche .icones{
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+}
+
+.contact-gauche a img {
+    transition: transform 0.3s;
+}
+.contact-gauche  a img:hover {
+    transform: scale(1.1);
+}
+
+/* PARTIE DROITE DE CONTACT  */
+#contact .contact-droite{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact .contact-droite h2{
+    color: var(--var-text-color);
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.contact-droite form{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.contact-droite form input, textarea{
+    height: 2.5rem;
+    padding: 0.8rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1rem;
+}
+
+.contact-droite form textarea{
+    height: 100px;
+    color: var(--var-text-color-dark);
+}
+
+.contact-droite button{
+    height: 2.5rem;
+    border-radius: 5px;
+    border-style: none;
+    cursor: pointer;
+    color: var(--var-text-color-dark);
+    transition: 0.3s;
+}
+
+.contact-droite button:hover{
+    color: var(--var-text-color);
+    background-color: var(--var-text-color-dark);
+    border: 1px solid var(--var-text-color);
+}
+
+/* FOOTER  */
+footer{
+    width: 100%;
+    height: 100px;
+    background-color: #fff;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--var-text-color-dark);
+    border-radius: 1rem;
+}
+
+/* Media queries */
+
+/* Sur les téléphones */
+@media screen and (max-width:480px) {
+    header nav{
+        display: none;
+    }
+
+    main{
+        padding: 1rem;
+    }
+
+    /* HERO  */
+    #hero{
+        flex-direction: column;
+        min-height: 120vh;
+        gap: 10px;
+    }
+    
+    .gauche-hero{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .gauche-hero h2{
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .gauche-hero p{
+        text-align: center;
+    }
+
+    /* A PROPOS */
+    #about h2{
+        font-size: 25px;
+    }
+
+    #about p{
+        font-size: 12px;
+    }
+
+    /* CONTACT */
+
+    #contact{
+        flex-direction: column;
+    }
+
+    #contact .contact-gauche h2{
+        font-size: 25px;
+    }
+
+    .contact-gauche .icones img{
+        width: 60px;
+        height: 60px;
+    }
+
+    #contact .contact-droite h2{
+        font-size: 25px;
+    }
+
+    .contact-droite form input, textarea{
+        height: 2rem;
+        padding: 0.8rem 0.8rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        outline: none;
+        font-size: 12px;
+    }
+
+    /* FOOTER */
+    footer{
+        text-align: center;
+    }
+}
+
+/* Sur les tablettes */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    
+    main{
+        padding: 1rem;
+    }
+
+    /* HERO  */
+    #hero{
+        flex-direction: column;
+        min-height: 150vh;
+        gap: 10px;
+    }
+    
+    .gauche-hero{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .gauche-hero h2{
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .gauche-hero p{
+        text-align: center;
+    }
+
+    .droite-hero img{
+        height: 100vh;
+    }
+
+    /* A PROPOS */
+    #about{
+        height: 50vh;
+    }
+    #about h2{
+        font-size: 25px;
+    }
+
+    #about p{
+        font-size: 13px;
+    }
+
+    /* CONTACT */
+
+    #contact{
+        flex-direction: column;
+        min-height: 100vh;
+
+    }
+
+    #contact .contact-gauche h2{
+        font-size: 25px;
+    }
+
+    .contact-gauche .icones img{
+        width: 70px;
+        height: 70px;
+    }
+
+    #contact .contact-droite h2{
+        font-size: 25px;
+    } 
+
+    .contact-droite form input, textarea{
+        height: 2rem;
+        padding: 0.8rem 0.8rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        outline: none;
+        font-size: 13px;
+    }
+}
